@@ -1,0 +1,172 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 400;
+  src: url("../fonts/NanumSquareR.eot");
+  src: url("../fonts/NanumSquareR.eot?#iefix") format("embedded-opentype"), url("../fonts/(NanumSquareR.woff") format("woff"), url("../fonts/NanumSquareR.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'noto';
+  font-weight: 400;
+  src: url("../fonts/NotoSans-Regular.eot");
+  src: url("../fonts/NotoSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/(NotoSans-Regular.woff") format("woff"), url("../fonts/NotoSans-Regular.ttf") format("truetype"); }
+
+/* HTML Default */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, article, aside, hgroup, header, footer, figure, figcaption, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, hgroup, header, footer, figure, figcaption, nav, section {
+  display: block; }
+
+body {
+    background: lightgray;
+  font: normal 14px/1.5 NanumSquare,'NanumSquare','돋움',Dotum,Helvetica,Verdana,Arial,sans-serif;
+  color: #666;
+  -webkit-text-size-adjust: none;
+  letter-spacing: -0.5px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ''; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%; }
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  overflow: visible;
+  cursor: pointer;
+  line-height: 1; }
+
+a:link, a:visited, a:hover, a, active, a:focus {
+  text-decoration: none !important;
+  cursor: pointer;
+  color: #337ab7; }
+
+legend, caption {
+  display: none; }
+
+textarea {
+  resize: vertical;
+  font: inherit;
+  overflow-y: auto; }
+
+input, select {
+  color: inherit;
+  font: inherit;
+  vertical-align: middle; }
+
+address, i {
+  font-style: normal; }
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed; }
+
+img, select, input, button {
+  vertical-align: middle; }
+
+em {
+  font-style: normal; }
+
+.shopby_main_wrap {
+  min-width: 1200px;
+  font-family: noto;
+  font-weight: 300; }
+
+.shopby_main_wrap .pop_fix {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 101; }
+
+.shopby_main_wrap .pop_fix .btn_wrap {
+  overflow: hidden;
+  background: #f8f8f8; }
+
+.shopby_main_wrap .pop_fix .btn_wrap a {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 44px;
+  line-height: 42px;
+  font-size: 13px;
+  color: #474747;
+  text-align: center; }
+
+.shopby_main_wrap .pop_fix .btn_wrap a:first-child {
+  background: url("../img/icon_bar.png") no-repeat 184px 12px; }
+.shopby_main_wrap .pop_slider_area {
+  width: 370px;
+}
+.shopby_main_wrap .pop_slider_area .pop_slider {
+  background: yellow;
+  position: relative;
+  overflow: hidden; }
+
+.shopby_main_wrap .pop_slider_area .slick-counter {
+  position: absolute;
+  width: 50px;    
+  bottom: 60px;
+  right: 10px;
+  color: #fff;
+  font-size: 13px;
+  background-color: rgba(0, 0, 0, 0.5);    
+  border-radius: 20px;
+  padding: 3px 0;
+  text-align: center; 
+  letter-spacing: 2px;}
+
+.shopby_main_wrap .pop_slider_area .slick-arrow {
+  visibility: hidden;
+  position: absolute;
+  top: 45%;
+  text-indent: -99999px;
+  font-size: 0;
+  width: 20px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/icon_left_arrow.png");
+  -webkit-transition: all .1s ease-out;
+  -moz-transition: all .1s ease-out;
+  -o-transition: all .1s ease-out;
+  transition: all .1s ease-out; }
+
+.shopby_main_wrap .pop_slider_area .slick-arrow.slick-prev {
+  left: -20px;
+  z-index: 1; }
+
+.shopby_main_wrap .pop_slider_area .slick-arrow.slick-next {
+  right: -20px;
+  background-image: url("../img/icon_right_arrow.png"); }
+
+.shopby_main_wrap .pop_slider_area:hover .slick-arrow.slick-prev {
+  visibility: visible;
+  left: 0; }
+
+.shopby_main_wrap .pop_slider_area:hover .slick-arrow.slick-next {
+  visibility: visible;
+  right: 0; }

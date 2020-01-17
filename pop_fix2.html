@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/new2020.css">
+    <link rel="stylesheet" href="./css/slick.css">
+
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/slick.js"></script>
+    <script type="text/javascript" src="./js/jquery.cookie.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            //슬라이딩 이미지 카운트
+            function popNoCount(){
+                var slickCurrent = $(".pop_slider .slick-current").attr("data-slick-index");
+                if (slickCurrent==0){
+                    $('.pop_slider_area .slick-counter .indexNo').text("1");
+                }
+                if (slickCurrent==1){
+                    $('.pop_slider_area .slick-counter .indexNo').text("2");
+                }
+                if (slickCurrent==2){
+                    $('.pop_slider_area .slick-counter .indexNo').text("3");
+                }
+            }
+            
+            setInterval(function(){popNoCount();},0);
+            
+            //슬라이딩 효과
+            $(".pop_slider").slick({
+                autoplay: true,
+                autoplaySpeed: 5000,
+                dots: false,
+                infinite: true,
+                arrows: true,
+                speed: 800,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                prevArrow: $('.pop_slider_area .slick-prev'),
+                nextArrow: $('.pop_slider_area .slick-next')
+            });
+            
+             //팝업 닫기
+            $('.btn_close').on("click", function (e) {
+                e.preventDefault();
+                $('.pop_fix').hide("on");
+            });
+            
+            // 쿠키 생성 스크립트
+            function setCookie( name, value, expiredays ) {
+                var todayDate = new Date();
+                todayDate.setDate( todayDate.getDate() + expiredays );
+                document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+            }
+            
+            //쿠키를 생성한다.
+            $(".btn_toDayClose").click(function(){                
+                setCookie( "topPop", "done" , 1 ); 
+                alert("쿠키를 생성하였습니다.");                
+            });
+            
+              //저장된 해당 쿠키가 있으면 창을 안 띄운다 없으면 뛰운다.
+                cookiedata = document.cookie;    
+                if ( cookiedata.indexOf("topPop=done") == 1 ){      
+                    document.all["pop_fix"].style.display = "";
+                    } 
+                else {
+                    document.all["pop_fix"].style.display = "none";
+                }
+
+        })        
+    </script>
+</head>
+
+<body>
+  
+   <div class="shopby_main_wrap">
+   
+        <div class="pop_fix" id="pop_fix">
+            
+            <div class="pop_slider_area">
+                <ul class="pop_slider">
+                    <li><a href=""><img src="./img/main_pop.png" alt=""></a></li>
+                    <li><a href=""><img src="./img/pop.png" alt=""></a></li>
+                    <li><a href=""><img src="./img/pop2.png" alt=""></a></li>
+                </ul>
+                <span class="slick-arrow slick-prev"></span>
+                <span class="slick-arrow slick-next"></span>
+                <p class="slick-counter">
+                    <span class="indexNo">7</span>/3
+                </p>
+            </div>
+
+            <div class="btn_wrap">
+                <a href="#" class="btn_toDayClose">오늘은 그만보기</a>
+                <a href="#" class="btn_close">닫기</a>
+            </div>
+
+        </div>
+    
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+$color-primarty:skyblue;
+$color-sub:hotpink;
+$w2:200px;
+$w4:400px;
+$hM:200px;
+$hL:400px;
+body {
+    background: $color-primarty;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+p {
+    color: white;    
+}
+
+.left {
+    background: green;
+    padding: 1em;
+    p {
+        background: yellowgreen;
+        padding: 1em;
+        margin: 1em;
+        &:last-child {
+            background: orange;
+        }
+        span {
+            color: yellow;
+        }
+    }
+}
+
+.fs {
+    &-small {font-size: 1em}
+    &-medium {font-size: 1.4em}
+    &-large {font-size: 1.8em}
+    &-maximum {font-size: 2em}
+}
+
+@mixin border-radius($radius){
+    -webkit-border-radius:$radius; 
+    -moz-border-radius:$radius;
+    -ms-border-radius:$radius;
+    border-radius:$radius;
+}
+
+.leftS {
+    display: block;
+    width: $w2;
+    height: $hM;
+    color: $color-primarty;
+    background: $color-sub;
+    @include border-radius(1em);
+}
